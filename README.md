@@ -26,6 +26,10 @@ Tamamlanan Görevler: Başarıyla bitirdiğiniz görevleri gösterir.
 
 Bu filtreler sayesinde, o an odaklanmak istediğiniz görev setini kolayca görüntüleyebilirsiniz.
 
+4. Sesli Geri Bildirim (Audio Feedback)
+Kullanıcı Deneyimi: Uygulamada yer alan tüm interaktif butonlara ve temel aksiyonlara (örneğin görev ekleme, silme, tamamlama) ses efektleri eklenmiştir. Bu özellik, kullanıcının eylemlerini hemen onaylayan eğlenceli ve sezgisel bir geri bildirim mekanizması sağlar.
+(Ses efektleri çalışmayabilir. Dosya Yolunuzu düzeltin.)
+
 🛠️ Ekstra Öğrenilenler: ngrok ile Halka Açma
 Bu projeyi geliştirirken, yerel sunucumu (localhost) geçici bir genel (public) bağlantı ile internet üzerinden erişilebilir yapmayı sağlayan önemli bir aracı öğrendim ve kullandım: ngrok.
 
@@ -61,6 +65,10 @@ Active Tasks: Shows only the tasks that are not yet completed, which are the one
 Completed Tasks: Shows the tasks you have successfully finished.
 
 These filters make it easy to view the specific set of tasks you want to focus on at any given moment.
+
+4. Audio Feedback (Sound Effects)
+User Experience: Sound effects have been integrated into all interactive buttons and core actions (e.g., adding, deleting, completing a task) within the application. This feature provides a fun and intuitive feedback mechanism that instantly confirms the user's actions.
+(NOTE!!: Your sound effect might be not run, if you want to render the codes. Update file path.)
 
 🛠️ Extra Learning: Public Exposure with ngrok
 While developing this project, I learned and utilized a crucial tool that allows for making my local server (localhost) accessible via a temporary public link on the internet: ngrok.
