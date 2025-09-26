@@ -1,0 +1,167 @@
+/* Sonbahar/Kış renk paleti */
+:root {
+    --primary-color: #1059c7;    /* Koyu gri-mavi */
+    --secondary-color: #7A3B2E;  /* Bordo-kahve */
+    --accent-color: #D68C45;     /* Turuncu-kahve */
+    --background-color: #F4EAE4; /* Bej */
+    --text-color: #2C3E50;       /* Koyu lacivert */
+    --delete-color: #943426;     /* Koyu kırmızı */
+    --success-color: #4A6741;    /* Koyu yeşil */
+    --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, var(--background-color), #E8D3C8);
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    color: var(--text-color);
+}
+
+h1 {
+    color: #333;
+}
+
+#taskInput {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 200px;
+    transition: width 0.2s ease;
+    height: 40px; /* Eklendi */
+    box-sizing: border-box; /* Eklendi */
+}
+
+.addButton {
+    padding: 8px 16px;
+    border: 1px solid var(--shadow-color);
+    border-radius: 4px;
+    background: transparent;
+    color: var(--success-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    height: 40px; /* Zaten vardı, input ile hizalama için önemli */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.deleteButton {
+    padding: 5px 10px;
+    background-color: #d9534f;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    margin-left: auto;
+}
+button:hover {
+    background: var(--success-color);
+    color: white;
+}
+.deleteButton:hover {
+    background: var(--delete-color);
+    color: white;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+    max-width: 600px;
+}
+
+li {
+    background: white;
+    margin: 5px 0;
+    padding: 10px;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+li.fade-out {
+    opacity: 0; /* Elemanın şeffaflaşması */
+    transform: translateX(100%); /* Sağa doğru kayma efekti */
+    height: 0; /* Elemanın dikeyde küçülerek yok olması */
+    padding: 0;
+    margin: 0;
+    pointer-events: none; /* Animasyon sırasında tıklamayı devre dışı bırak */
+    transition: all 0.5s ease-out; /* Animasyonun 0.5 saniyede tamamlanmasını sağlar */
+}
+.dragging {
+    opacity: 0.5;
+    background: #f0f0f0;
+}
+
+.Filter-Buttons {
+    margin: 0;
+    display: flex;
+    gap: 10px;
+}
+
+.Filter-Buttons button {
+    padding: 8px 16px;
+    border: 1px solid var(--primary-color);
+    border-radius: 4px;
+    background: transparent;
+    color: var(--primary-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.Filter-Buttons button:hover {
+    background: var(--primary-color);
+    color: white;
+}
+
+.Filter-Buttons button.active-filter {
+    background: var(--primary-color);
+    color: white;
+}
+
+.top-row {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+}
+
+.Filter-Buttons {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.Filter-Buttons button {
+    padding: 8px 12px;
+    min-width: 80px;
+}
+
+@media (max-width: 640px) {
+    .top-row {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .Filter-Buttons {
+        justify-content: space-between;
+    }
+}
